@@ -1,5 +1,7 @@
 package com.yaw.controller;
 
+import com.yaw.config.AuthorSetting;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,6 +17,8 @@ public class SampleController {
     private String bootAuthor;
     @Value("${book.name}")
     private String bookName;
+    @Autowired
+    private AuthorSetting authorSetting;
 
     @RequestMapping("/")
     @ResponseBody
@@ -27,4 +31,8 @@ public class SampleController {
         return "book name is :" + bookName + " and book author is :" + bootAuthor;
     }
 
+    @RequestMapping("/setting")
+    public String setting() {
+        return "author name:" + authorSetting.getName() + ", author age:" + authorSetting.getAge();
+    }
 }

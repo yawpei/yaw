@@ -1,8 +1,9 @@
+#端口设置
 server:
   port: 8080
   context-path:
-
-#自定义属性
-book:
-  author:  'yawpei'
-  name:  'spring-boot'
+#日志输出
+logging:
+  file: E:/projects/spring/log
+  level:
+    com.yaw: debug
