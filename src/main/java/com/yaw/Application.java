@@ -2,7 +2,6 @@ package com.yaw;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 
 /**
  * Created by yawpei on 2016/12/21.
